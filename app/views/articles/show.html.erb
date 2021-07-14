@@ -1,0 +1,16 @@
+<h1><%= @article.name %></h1>
+
+<p><%= @article.body %></p>
+
+<p>
+<%= link_to "Edit", edit_article_path(@article) %>
+<%= link_to "Delete", article_path(@article),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+</p>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
