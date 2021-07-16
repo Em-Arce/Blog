@@ -24,6 +24,9 @@
     line-height: 1.4;
     max-width: 75em;
     margin: 0 auto;
+    background-image: url("jess-bailey-l3N9Q27zULw-unsplash.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 html{
@@ -38,12 +41,22 @@ body {
     padding-bottom: 4rem;      /* Space available between last element and bottom border of the page */
 }
 
+div{
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
 h1{
     font-size: 30px;
 }
 
 p {
     margin: 0;
+}
+
+ul li {
+    padding-top: 15px;
+    margin-left: 50px;
 }
 
 a{
