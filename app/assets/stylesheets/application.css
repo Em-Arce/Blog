@@ -78,8 +78,3 @@ a:focus{
     color: slategray;
 }
 
-.btn-danger:hover,
-.btn-group > .btn-danger: hover{
-    color: #dc3545;
-
-}
