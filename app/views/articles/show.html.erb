@@ -1,16 +1,21 @@
-<h1><%= @article.name %></h1>
+<div class="text-center">
+    <div class="container">
+        <h1><%= @article.name %></h1>
 
-<p><%= @article.body %></p>
+        <p><%= @article.body %></p>
 
-<p>
-<%= link_to "Edit", edit_article_path(@article) %>
-<%= link_to "Delete", article_path(@article),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
-</p>
+        <p class="btn-group btn-group-sm">
+        <%= link_to "Edit", edit_article_path(@article), class:'btn btn-info' %>
+        <%= link_to "Delete", article_path(@article), class:'btn btn-danger',
+                          method: :delete,
+                          data: { confirm: "Are you sure?" } %>
+        </p>
+    </div>
+    <div>
+        <h5>Comments</h5>
+        <%= render @article.comments %>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
-
-<h2>Add a comment:</h2>
-<%= render 'comments/form' %>
+        <h5>Add a comment</h5>
+        <%= render 'comments/form' %>
+    </div>
+</div>
